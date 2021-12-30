@@ -1,0 +1,18 @@
+version: "3"
+# More info at https://github.com/Erreede/GoodInternetOrComplain
+services:
+  application:
+    container_name: good_internet_or_complain
+    build:
+        dockerfile: Dockerfile
+    volumes:
+        - GoodInternetOrComplainDB:/db/
+    environment:
+        - twitterAPI_oAuthToken=${twitterAPI_oAuthToken}
+        - twitterAPI_oAuthSecret=${twitterAPI_oAuthSecret}
+        - twitterAPI_appClientID=${twitterAPI_appClientID}
+        - twitterAPI_appClientSecret=${twitterAPI_appClientSecret}
+
+volumes:
+  GoodInternetOrComplainDB:
+    external: true
