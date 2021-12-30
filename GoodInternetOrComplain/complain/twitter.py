@@ -9,10 +9,10 @@ def complainOnTwitter(data):
         hired_bandwidth_str = "1 Gb/s simétricos"
         downspeed =  round((round(data['download']) / 1048576), 2)
         downspeed_str = str(downspeed) + " Mb/s"
-        downspeed_quality = str(100 * float(downspeed)/float(hired_bandwidth)) + "%"
+        downspeed_quality = str(round(100 * float(downspeed)/float(hired_bandwidth), 2)) + "%"
         upspeed = round((round(data['upload']) / 1048576), 2)
         upspeed_str = str(upspeed) + " Mb/s"
-        upspeed_quality = str(100 * float(upspeed)/float(hired_bandwidth)) + "%"
+        upspeed_quality = str(round(100 * float(upspeed)/float(hired_bandwidth), 2)) + "%"
         ping = str(round(data['ping'], 2)) + " ms"
         
         message = "La velocidad de mi conexión es:\r\n-Bajada: " + downspeed_str + "\r\n-Subida: " + upspeed_str + "\r\n-Ping: " + ping + "\r\n\r\nDetalle: " + data['png_url'] + "\r\n\r\nContratado: " + hired_bandwidth_str + ", lo que supone un " + downspeed_quality + " de la bajada y un " + upspeed_quality + " de la subida."
