@@ -14,7 +14,9 @@
 *.userprefs
 GoodInternetOrComplain/envGoodInternetOrComplain/
 *.db
+*.pyproj
 .env
+
 
 # Mono auto generated files
 mono_crash.*
