@@ -12,6 +12,7 @@ services:
         - twitterAPI_oAuthSecret=${twitterAPI_oAuthSecret}
         - twitterAPI_appClientID=${twitterAPI_appClientID}
         - twitterAPI_appClientSecret=${twitterAPI_appClientSecret}
+        - twitterComplain=${twitterComplain}
 
 volumes:
   GoodInternetOrComplainDB:
