@@ -2,10 +2,7 @@ import speedtest
 
 def performTest():
     try:
-        try:
-            s = speedtest.Speedtest(secure=True)
-        except:
-            s = speedtest.Speedtest()
+        s = speedtest.Speedtest()
         s.download()
         s.upload(pre_allocate=False)
         results = s.results.dict()
